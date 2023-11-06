@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
-    <link rel="stylesheet" href="/style/registration.css" />
+    <link rel="stylesheet" href="/css/registration.css" />
   </head>
   <body>
     <div class="login-container">
       <div class="login-form">
         <h2>Register</h2>
         <form action="login.php" method="POST">
-          <input type="text" name="USERNAME" placeholder="Username" required />
+          <input type="text" name="FULLNAME" placeholder="Fullname" required />
           <br />
-          <input type="text" name="GMAIL" placeholder="Gmail" required />
-          <br />
-          <input type="text" name="USERNAME" placeholder="Username" required />
+          <input
+            type="text"
+            name="EMAIL"
+            placeholder="Email Address"
+            required
+          />
           <br />
           <input
             type="password"
@@ -24,9 +27,9 @@
             required
           />
           <br />
-          <input type="submit" value="Login" />
+          <input type="submit" value="Submit" />
         </form>
-        <a href="registration.php" class="register">Register Here!</a>
+        <a href="login.html" class="register">Register Here!</a>
       </div>
     </div>
   </body>

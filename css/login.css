@@ -1,5 +1,5 @@
 body {
-    background-image: url("/public/login.jpeg"); /* Set your own background image */
+    background-image: url("/assets/Background/login.jpeg"); /* Set your own background image */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -16,8 +16,12 @@ body {
     height: 100vh;
 }
 
+h2{
+    color: white;
+}
+
 .login-form {
-    background: transparent;
+    background: rgba(97, 110, 187, 0.5);
     text-align: center;
     padding: 20px;
     border: 1px solid #ccc;
@@ -26,7 +30,7 @@ body {
     width: 300px;
 }
 
-.login-form input[type="text"],
+.login-form input[type="email"],
 .login-form input[type="password"] {
     width: 90%;
     padding: 10px;
@@ -46,7 +50,15 @@ body {
     margin-bottom: 10px;
 }
 
+.login-form input[type="submit"]:hover{
+    background-color: rgb(173, 181, 230);
+}
+
 .register{
     margin-top: 10px;
     color: white;
+}
+
+.register:hover{
+    color: black;
 }
