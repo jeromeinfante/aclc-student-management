@@ -1,5 +1,5 @@
 body {
-    background-image: url("/assets/Background/login.jpeg"); /* Set your own background image */
+    background-image: url("../assets/image/login.jpeg"); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
