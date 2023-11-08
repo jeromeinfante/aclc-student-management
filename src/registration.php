@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,28 +25,31 @@ session_start();
 
         <?php
         include("dbconn.php");
-        $fullname = $_POST['FULLNAME'];
-        $email = $_POST['EMAIL'];
-        $pswd = $_POST['PASSWORD'];
-        $password = md5($pswd);
-        $submit = $_POST['SUBMIT'];
-        if (isset($submit)) {
-       
-          $check = "SELECT * FROM `users` WHERE `full_name` = '$fullname' AND `email_address` = '$email' AND `user_password' = '$finalPassword'";
-          $result = mysqli_query($CONN, $check);
-          $data = mysqli_fetch_array($result, MYSQLI_NUM);
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          $fullname = $_POST["FULLNAME"];
+          $email = $_POST["EMAIL"];
+          $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
 
-          if($data[0] > 1){
-            echo '<script>alert("Account already exist!")</script>';
-          }else{
-            $insert = "INSERT INTO users (full_name, email_address, user_password) VALUES ('$fullname', '$email', '$password')";
-            if(mysqli_query($CONN, $insert)){
-              header("location: registration.php");
-            }else{
-              echo '<script>("Invalid")</script>';
+          $check_query = "SELECT * FROM users WHERE email_address = '$email'";
+          $check_result = mysqli_query($CONN, $check_query);
+
+          if (mysqli_num_rows($check_result) > 0) {
+            echo '<script>alert ("Email Address Already Exists")</script>';
+          } else {
+            $insert_query = "INSERT INTO users (full_name, email_address, user_password) VALUES ('$fullname', '$email', '$password')";
+            if (mysqli_query($CONN, $insert_query)) {
+              echo "Registration Successfull!";
+              header("location: login.php");
+            } else {
+              echo "Error" . mysqli_error($CONN);
             }
           }
+          mysqli_close($CONN);
         }
+
+
+
+
         ?>
 
 
@@ -62,9 +61,3 @@ session_start();
 </body>
 
 </html>
-
-<?php
-
-session_destroy();
-
-?>
