@@ -1,5 +1,7 @@
+/* GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 /* FOR ALL */
 * {
 	margin: 0;
@@ -47,13 +49,13 @@
 	left: 0;
 	width: 0;
 	height: 2px;
-	background: blue;
-	transition: 0.3s;
+	background: red;
+	transition: 0.5s;
 }
 
 .navbar a:hover::before {
 	width: 100%;
-	background-color: lightblue;
+	background-color: orange;
 }
 /* END NAVBAR/HEADER */
 
@@ -109,7 +111,7 @@
 }
 
 .cd {
-	color: orange;
+	color: white;
 }
 
 .ef {
@@ -140,9 +142,14 @@ img {
 }
 
 #about {
-	width: 100%;
+	height: 100vh;
+	width: 100vw;
 	padding: 78px 0px;
 	background-color: #191919;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #about img {
@@ -180,7 +187,6 @@ img {
 
 .about-text p {
 	color: white;
-	font-weight: bolder;
 	letter-spacing: 1px;
 	line-height: 24px;
 	font-size: 18px;
@@ -202,3 +208,55 @@ button:hover {
 	cursor: pointer;
 }
 /* END ABOUT */
+
+/* GALLERY */
+#gallery {
+	font-family: "Muli", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	background-color: #282c34;
+}
+
+.gallery_container {
+	display: flex;
+	width: 90vw;
+}
+
+.panel {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 80vh;
+	border-radius: 50px;
+	color: #fff;
+	cursor: pointer;
+	flex: 0.5;
+	margin: 10px;
+	position: relative;
+	-webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+	font-size: 24px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	margin: 0;
+	opacity: 0;
+}
+
+.panel.active {
+	flex: 5;
+}
+
+.panel.active h3 {
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.4s;
+}
+/* END GALLERY */
+
+/* SKILLS */
