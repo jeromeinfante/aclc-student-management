@@ -4,114 +4,66 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfolio</title>
-        <link rel="stylesheet" href="../css/portfolio.css">
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-			crossorigin="anonymous"
-		/>
-        <link rel="stylesheet" href="../css/textanimation.css">
+		<link rel="stylesheet" href="../css/portfolio.css" />
 	</head>
 
 	<body>
-		<nav class="navbar navbar-expand-lg fixed-top navbarScroll">
-			<div class="container">
-				<a class="navbar-brand text-white navlink rounded-1" href="https://github.com/sphyxi4">INFANTE</a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div
-					class="collapse navbar-collapse"
-					id="navbarSupportedContent"
-				>
-					<ul class="navbar-nav ms-auto">
-						<li class="nav-item active navlink">
-							<a class="nav-link text-white rounded-1 hv navlink" href="#home">Home</a>
-						</li>
-						<li class="nav-item navlink">
-							<a class="nav-link text-white navlink" href="#about">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white navlink" href="#services">Services</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white navlink" href="#portfolio">Portfolio</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white navlink" href="#contact">Contact</a>
-						</li>
-					</ul>
+		<!-- THIS IS FOR HEADER/NAVBAR -->
+		<header class="header">
+			<a href="https://github.com/sphyxi4" class="logo">Asphyxia</a>
+			<nav class="navbar">
+				<a href="#home">Home</a>
+				<a href="#about">About</a>
+				<a href="">Gallery</a>
+				<a href="">Projects</a>
+				<a href="">Contact</a>
+			</nav>
+		</header>
+		<!-- END NAVBAR-->
+
+		<!-- THIS IS FOR HOME -->
+		<section id="home">
+			<div class="home">
+				<h1>
+					System<span style="color: white"
+						>.<span style="color: #e06c75">out</span>.</span
+					><span style="color: #61afef">println</span>("
+				</h1>
+				<div class="string">
+					<h1 class="greeting ab">Hello World!</h1>
+					<h1 class="greeting cd">Jerome Infante</h1>
+					<h1 class="greeting ef">Web Developer</h1>
+					<h1 class="greeting gh">Software Engineer</h1>
 				</div>
+				<h1 class="closure">");</h1>
 			</div>
-		</nav>
-		<section class="bgimage" id="home">
-			<div class="container-fluid">
-				<div class="row">
-					<div
-						class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text"
-					><div class="container-textanimation">
-                        <p>Hello 👋 I'm</p>
-                        <section class="animation">
-                          <div class="first"><div>Jerome Infante</div></div>
-                          <div class="second"><div>Web Developer</div></div>
-                          <div class="third"><div>Software Engineer</div></div>
-                        </section>
-                      </div>
-					</div>
+		</section>
+		<!-- END HOME-->
+
+		<section id="about">
+			<div class="main-about">
+				<img src="../assets/image/pfp.jpg" alt="" />
+				<div class="about-text">
+					<h1>About Me</h1>
+					<h5>
+						Fullstack
+						<span style="color: lightblue">Developer</span>
+					</h5>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Possimus, exercitationem veniam a fugit asperiores
+						voluptatum similique eos earum corrupti delectus quaerat
+						facilis cumque inventore culpa quod, corporis, debitis
+						ratione distinctio. Omnis placeat, saepe repellat
+						debitis labore ab vel eveniet officiis dolorem natus
+						quidem aperiam laudantium corrupti illo ratione,
+						maiores, ipsum quos dolorum. Nostrum accusamus laborum
+						sequi accusantium sapiente, tempora temporibus.
+					</p>
+					<button id="github_button">Github</button>
 				</div>
 			</div>
 		</section>
-        <section id="about">
-            <div class="container mt-4 pt-4 bg-white">
-                <h1 class="text-center">About Me</h1>
-                <div class="row mt-4">
-                    <div class="col-lg-4">
-                        <img src="images/about.jpeg" class= "imageAboutPage" alt="">
-                    </div>
-    
-                    <div class="col-lg-8">
-                        <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-                            
-                        </p>
-                        <div class="row mt-3">
-                            <div class="col-md-6">
-                                <ul>
-                                    <li>Name: David Parker</li>
-                                    <li>Age: 28</li>
-                                    <li>Occupation: Web Developer</li>
-    
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul>
-                                    <li>Name: David Parker</li>
-                                    <li>Age: 28</li>
-                                    <li>Occupation: Web Developer</li>
-    
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        </section>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-			crossorigin="anonymous"
-		></script>
+		<script src="portfolio.js"></script>
 	</body>
 </html>
