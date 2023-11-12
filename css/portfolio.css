@@ -197,14 +197,14 @@ button {
 	background: transparent;
 	color: white;
 	text-decoration: none;
-	border: 2px solid lightblue;
+	border: 2px solid red;
 	font-weight: bold;
 	padding: 13px 30px;
 	border-radius: 30px;
 }
 
 button:hover {
-	background-color: lightblue;
+	background-color: lightcoral;
 	cursor: pointer;
 }
 /* END ABOUT */
