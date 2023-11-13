@@ -260,3 +260,16 @@ button:hover {
 /* END GALLERY */
 
 /* SKILLS */
+#skills{
+	height: 100vh;
+	background-color: #191919;
+	padding-top: 20px;
+}
+
+.myskills{
+	margin-top: 50px;
+}
+
+.skills-header{
+	text-align: center;
+}
