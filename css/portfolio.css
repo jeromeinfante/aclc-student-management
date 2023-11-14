@@ -193,7 +193,7 @@ img {
 	margin-bottom: 25px;
 }
 
-button {
+.button-about {
 	background: transparent;
 	color: white;
 	text-decoration: none;
@@ -201,9 +201,10 @@ button {
 	font-weight: bold;
 	padding: 13px 30px;
 	border-radius: 30px;
+	margin-right: 20px;
 }
 
-button:hover {
+.button-about:hover {
 	background-color: lightcoral;
 	cursor: pointer;
 }
@@ -260,16 +261,90 @@ button:hover {
 /* END GALLERY */
 
 /* SKILLS */
-#skills{
+#skills-section {
 	height: 100vh;
+	width: 100vw;
 	background-color: #191919;
-	padding-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.myskills{
-	margin-top: 50px;
+.skill-card {
+	max-width: 190px;
+	max-height: 400px;
+	margin: 20px;
+	background-color: #282c34;
+	padding: 20px;
+	border: lightblue 2px solid;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.141);
 }
 
-.skills-header{
+.skill-card:hover {
+	cursor: pointer;
+	border-color: #191919;
+}
+
+.skill-image {
+	height: auto;
+	width: 100%;
+	border-radius: 8px;
+}
+
+.skill-name {
+	margin-top: 10px;
+	font-weight: bold;
 	text-align: center;
+}
+
+.progress-bar {
+	height: 15px;
+	background-color: #e0e0e0;
+	border-radius: 4px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+.progress {
+	height: 100%;
+	width: 60%; /* Change this value to represent the skill level */
+	background-color: red;
+	border-radius: 4px;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: black;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+	z-index: 1000;
+	width: 50%;
+	height: 50%;
+	border: lightblue 3px solid;
+}
+
+.closeModal {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s ease-in-out;
+	border: none;
+}
+
+#tool-name {
+	margin-bottom: 60px;
 }
