@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login|Register</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="/src/styles/login.css"/>
 </head>
+
 <body>
-    <div class="container">
+    <div class="hero">
         <div class="form-box">
-            <form action="" method="post">
-                <input type="text" name="USERNAME" placeholder="Userame">
-                <input type="password" name="PASSWORD" placeholder="Password">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" id="login-btn">
+                    Login
+                </button>
+                <button type="button" class="toggle-btn" id="register-btn">
+                    Register
+                </button>
+            </div>
+            <form id="login" action="login.php" method="post" class="input-group">
+                <input type="text" class="input-field" placeholder="Username" required name="USERNAME" />
+                <input type="password" class="input-field" placeholder="Password" required name="PASSWORD" />
+                <button type="submit" class="submit-btn" name="LOGIN-BTN">Log In</button>
+            </form>
+            <form id="register" action="login.php" method="post" class="input-group">
+                <input type="text" class="input-field" placeholder="Username" required name="USERNAME" />
+                <input type="text" class="input-field" placeholder="Gmail" required name="GMAIL" />
+                <input type="password" class="input-field" placeholder="Password" required name="PASSWORD" />
+                <button type="submit" class="submit-btn" name="REGISTER-BTN">Register</button>
             </form>
         </div>
     </div>
+    <script src="/src/app/components/login.js"></script>
 </body>
+
 </html>
