@@ -8,6 +8,7 @@ In a bustling educational environment, managing student information efficiently 
 
 ## Requirements Gathering
 - Grade and Section
+- Strand
 - Name
 - Address
 - Cellphone Number
