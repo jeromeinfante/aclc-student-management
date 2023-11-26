@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+   
 }
 
 .hero {
@@ -39,7 +40,7 @@
     border-right: 0;
     border-bottom: 1px solid #999;
     outline: none;
-    background: transparent;
+    background: white;
 }
 
 .submit-btn {
@@ -54,15 +55,15 @@
     border-radius: 30px;
 }
 
-#login {
+#register {
     left: 50px;
 }
 
 a {
-  text-decoration:none ;
-  font-size: smaller;
+    text-decoration:none ;
+    font-size: smaller;
 }
 
 a:hover{
-  color: black;
+    color: black;
 }
