@@ -42,11 +42,6 @@ if (isset($_POST["REGISTER-BTN"])) {
 
 ?>
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
