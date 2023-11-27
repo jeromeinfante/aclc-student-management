@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once("dbconn.php");
 
 if (isset($_POST["USERNAME"]) && isset($_POST["PASSWORD"])) {
@@ -21,28 +21,20 @@ if (isset($_POST["USERNAME"]) && isset($_POST["PASSWORD"])) {
     $select = "SELECT * FROM `admin_acc` WHERE admin_username ='$username' AND admin_password = '$password' ";
     $result = $conn->query($select);
 
-    if ($result->num_rows > 0) {
-        session_start();
-        $_SESSION['admin_username'] = $username;
-        // header('location: home.php');
-
-    }else{
-        header('location: login.php?error=Invalid Account');
+  if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        if ($row["admin_username"] === $username && $row["admin_password"] === $password) {
+            $_SESSION['admin_username'] = $row['admin_username'];
+            header('location: home.php');
+            exit();
+        } else {
+            header('location: login.php?error=Incorrect Password or Username');
+            exit();
+        }
+    } else {
+        header('location: login.php?error=Incorrect Password or Username');
+        exit();
     }
-
-//   if (mysqli_num_rows($result) == 1) {
-//         $row = mysqli_fetch_assoc($result);
-//         if ($row["admin_username"] === $username && $row["admin_password"] === $password) {
-//             header('location: home.php');
-//             exit();
-//         } else {
-//             header('location: login.php?error=Incorrect Password or Username');
-//             exit();
-//         }
-//     } else {
-//         header('location: login.php?error=Incorrect Password or Username');
-//         exit();
-//     }
 }
 ?>
 

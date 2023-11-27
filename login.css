@@ -13,7 +13,7 @@
     background-position: center;
     background-size: cover;
     position: absolute;
-    background-image: url(/assets/images/bg.jpg);
+    background-image: url(bg.jpg);
 }
 
 .form-box {
