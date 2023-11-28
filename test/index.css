@@ -50,3 +50,27 @@
     width: 100%;
     background-color: orange;
 }
+
+.container{
+    /* border: 1px solid black; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome{
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 75vh;
+
+
+}
+
+.paragraph{
+    /* border: 1px solid black; */
+    position: relative;
+    top: 80px;
+    text-align: justify;
+}
+
