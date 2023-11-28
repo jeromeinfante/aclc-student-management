@@ -44,7 +44,7 @@ if (isset($_POST["USERNAME"]) && isset($_POST["PASSWORD"])) {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library</title>
+    <title>Login</title>
     <link rel="stylesheet" href="login.css?v=<?php echo time(); ?>" />
 </head>
 

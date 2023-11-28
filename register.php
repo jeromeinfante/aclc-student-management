@@ -49,7 +49,7 @@ if (isset($_POST["REGISTER-BTN"])) {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library</title>
+    <title>Register</title>
     <link rel="stylesheet" href="register.css?v=<?php echo time(); ?>" />
 </head>
 
