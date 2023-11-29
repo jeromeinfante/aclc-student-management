@@ -32,7 +32,6 @@ if (isset($_SESSION['admin_username'])) {
                 <th>Strand</th>
                 <th>Cellphone Number</th>
                 <th>Gmail</th>
-                <th>Gender</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -45,7 +44,6 @@ if (isset($_SESSION['admin_username'])) {
                 <td>A</td>
                 <td>New York</td>
                 <td>USA</td>
-                <td>Male</td>
                 <td>
                     <button class="button delete">Delete</button>
                     <button class="button update">Update</button>
