@@ -1,26 +1,22 @@
-<?php 
+<?php
 session_start();
 
 if (isset($_SESSION['admin_username'])) {
 
- ?>
+?>
 
- <?php 
- 
- 
- 
- 
- 
- ?>
 
-<!DOCTYPE html>
-<html lang="en">
+
+    <!DOCTYPE html>
+    <html lang="en">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Home</title>
         <link rel="stylesheet" href="../styles/add.css?v=<?php echo time(); ?>" />
     </head>
+
     <body>
         <header class="header">
             <h2 class="logo">Add</h2>
@@ -36,64 +32,50 @@ if (isset($_SESSION['admin_username'])) {
             <div class="container">
                 <div class="title">Add New Student</div>
                 <div class="content">
-                    <form action="#">
+                    <form action="add_student.php" method="POST">
+                        <?php if (isset($_GET['error'])) { ?>
+                            <p class="error"><?php echo $_GET['error'] ?></p>
+
+                        <?php } ?>
+
+                        <?php if (isset($_GET['success'])) { ?>
+                            <p class="success"><?php echo $_GET['success'] ?></p>
+
+                        <?php } ?>
                         <div class="user-details">
                             <div class="input-box">
-                                <input
-                                    type="text"
-                                    placeholder="Full Name"
-                                    required
-                                />
+                                <input type="text" placeholder="Full Name" name="FULLNAME" />
                             </div>
                             <div class="input-box">
-                                <input
-                                    type="text"
-                                    placeholder="Section"
-                                    required
-                                />
+                                <input type="text" placeholder="Section" name="SECTION" />
                             </div>
                             <div class="input-box">
-                                <input
-                                    type="number"
-                                    placeholder="Grade Level"
-                                    required
-                                />
+                                <input type="number" placeholder="Grade Level" name="GRADE" />
                             </div>
                             <div class="input-box">
-                                <input
-                                    type="text"
-                                    placeholder="Strand"
-                                    required
-                                />
+                                <input type="text" placeholder="Strand" name="STRAND" />
                             </div>
                             <div class="input-box">
-                                <input
-                                    type="text"
-                                    placeholder="Celphone Number"
-                                    required
-                                />
+                                <input type="text" placeholder="Celphone Number" name="CP_NUMBER" />
                             </div>
                             <div class="input-box">
-                                <input
-                                    type="text"
-                                    placeholder="Gmail"
-                                    required
-                                />
+                                <input type="text" placeholder="Gmail" name="GMAIL" />
                             </div>
                         </div>
                         <div class="button">
-                            <input type="submit" value="Add" />
+                            <button name="ADD_BTN" type="submit">Add</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </body>
-</html>
 
-<?php 
-}else{
-     header("Location: login.php");
-     exit();
+    </html>
+
+<?php
+} else {
+    header("Location: login.php");
+    exit();
 }
- ?>
+?>
