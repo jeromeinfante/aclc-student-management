@@ -1,6 +1,6 @@
 <?php
 
-include_once("dbconn.php");
+include_once("../database/dbconn.php");
 
 $fullname = $_POST['FULLNAME'];
 $section = $_POST['SECTION'];
@@ -15,18 +15,18 @@ $add = "INSERT INTO student_info (stud_name, stud_section, stud_grade, stud_stra
 
 if (isset($_POST['ADD_BTN'])) {
     if (empty($fullname)) {
-        header('location: add.php?error="Name is Required"');
+        header('location: ../add.php?error="Name is Required"');
     }elseif (empty($section)) {
-        header('location: add.php?error="Section is Required"');
+        header('location: ../add.php?error="Section is Required"');
     }elseif (empty($grade)) {
-        header('location: add.php?error="Grade is Required"');
+        header('location: ../add.php?error="Grade is Required"');
     }elseif (empty($strand)) {
-        header('location: add.php?error="Strand is Required"');
+        header('location: ../add.php?error="Strand is Required"');
     }elseif (empty($cpnumber)) {
-        header('location: add.php?error="Number is Required"');
+        header('location: ../add.php?error="Number is Required"');
     }elseif (empty($gmail)) {
-        header('location: add.php?error="Gmail is Required"');
+        header('location: ../add.php?error="Gmail is Required"');
     }elseif (is_string($section) && strlen($section) > 1) {
-        header('location: add.php?error="Section Should be one Character"');
+        header('location: ../add.php?error="Section Should be one Character"');
     }
 }

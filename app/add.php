@@ -32,7 +32,7 @@ if (isset($_SESSION['admin_username'])) {
             <div class="container">
                 <div class="title">Add New Student</div>
                 <div class="content">
-                    <form action="add_student.php" method="POST">
+                    <form action="./functions/add_student.php" method="POST">
                         <?php if (isset($_GET['error'])) { ?>
                             <p class="error"><?php echo $_GET['error'] ?></p>
 

@@ -394,11 +394,11 @@ img {
 .services-card h3{
 	color: white;
 	text-align: center;
-	margin-top: 5px;
+	margin-top: 1px;
 
 }
 .services-card p{
 	color: white;
 	text-align: justify;
-	margin: 10px 10px 10px 10px;
+	margin: 5px 10px 5px 10px;
 }
