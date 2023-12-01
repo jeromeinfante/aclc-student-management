@@ -3,6 +3,8 @@ session_start();
 
 if (isset($_SESSION['admin_username'])) {
 
+
+
 ?>
 
 
@@ -13,8 +15,8 @@ if (isset($_SESSION['admin_username'])) {
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home</title>
-        <link rel="stylesheet" href="../styles/add.css?v=<?php echo time(); ?>" />
+        <title>User Registration</title>
+        <link rel="stylesheet" href="../styles/add.css?v=<?php echo time(); ?>">
     </head>
 
     <body>
@@ -30,9 +32,9 @@ if (isset($_SESSION['admin_username'])) {
         </header>
         <div class="parent-container">
             <div class="container">
-                <div class="title">Add New Student</div>
+                <div class="title">Add Student</div>
                 <div class="content">
-                    <form action="./functions/add_student.php" method="POST">
+                    <form action="./functions/add_student.php">
                         <?php if (isset($_GET['error'])) { ?>
                             <p class="error"><?php echo $_GET['error'] ?></p>
 
@@ -44,30 +46,78 @@ if (isset($_SESSION['admin_username'])) {
                         <?php } ?>
                         <div class="user-details">
                             <div class="input-box">
-                                <input type="text" placeholder="Full Name" name="FULLNAME" />
+                                <span class="details">Full Name</span>
+                                <input type="text" placeholder="Enter your name" required>
                             </div>
                             <div class="input-box">
-                                <input type="text" placeholder="Section" name="SECTION" />
+                                <span class="details">Gmail</span>
+                                <input type="text" placeholder="Enter your username" required>
                             </div>
                             <div class="input-box">
-                                <input type="number" placeholder="Grade Level" name="GRADE" />
+                                <span class="details">Phone Number</span>
+                                <input type="text" placeholder="Enter your email" required>
                             </div>
                             <div class="input-box">
-                                <input type="text" placeholder="Strand" name="STRAND" />
-                            </div>
-                            <div class="input-box">
-                                <input type="text" placeholder="Celphone Number" name="CP_NUMBER" />
-                            </div>
-                            <div class="input-box">
-                                <input type="text" placeholder="Gmail" name="GMAIL" />
+                                <span class="details">Hometown</span>
+                                <input type="text" placeholder="Enter your number" required>
                             </div>
                         </div>
+                        <!-- <div class="gender-details">
+                            <input type="radio" name="gender" id="dot-1">
+                            <input type="radio" name="gender" id="dot-2">
+                            <span class="gender-title">Gender</span>
+                            <div class="category">
+                                <label for="dot-1">
+                                    <span class="dot one"></span>
+                                    <span class="gender">Male</span>
+                                </label>
+                                <label for="dot-2">
+                                    <span class="dot two"></span>
+                                    <span class="gender">Female</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <input type="radio" name="gender" id="dot-1">
+                            <input type="radio" name="gender" id="dot-2">
+                            <input type="radio" name="gender" id="dot-3">
+                            <span class="gender-title">Gender</span>
+                            <div class="category">
+                                <label for="dot-1">
+                                    <span class="dot one"></span>
+                                    <span class="gender">Male</span>
+                                </label>
+                                <label for="dot-2">
+                                    <span class="dot two"></span>
+                                    <span class="gender">Female</span>
+                                </label>
+                                <label for="dot-3">
+                                    <span class="dot three"></span>
+                                    <span class="gender">Prefer not to say</span>
+                                </label>
+                            </div>
+                        </div> -->
+                        <div class="Grade">
+                            <h3>Grade Level</h3>
+                            <input type="radio" id="11" name="grade_level" value="11">
+                            <label for="11">11</label>
+                            <input type="radio" id="12" name="grade_level" value="12">
+                            <label for="12">12</label>
+                        </div>
+                        <div class="Section">
+                            <h3>Section</h3>
+                            <input type="radio" id="11" name="grade_level" value="11">
+                            <label for="11">A</label>
+                            <input type="radio" id="12" name="grade_level" value="12">
+                            <label for="12">B</label>
+                        </div>
                         <div class="button">
-                            <button name="ADD_BTN" type="submit">Add</button>
+                            <input type="submit" value="Register">
                         </div>
                     </form>
                 </div>
             </div>
+
         </div>
     </body>
 
