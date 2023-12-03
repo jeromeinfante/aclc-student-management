@@ -51,7 +51,7 @@
   background-color: orange;
 }
 
-.parent-container{
+.parent-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,23 +59,23 @@
 }
 
 section {
-margin: 20px;
+  margin: 20px;
 }
 
-.container{
+.container {
   max-width: 700px;
   width: 100%;
   background-color: #fff;
   padding: 25px 30px;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-.container .title{
+.container .title {
   font-size: 25px;
   font-weight: 500;
   position: relative;
 }
-.container .title::before{
+.container .title::before {
   content: "";
   position: absolute;
   left: 0;
@@ -85,22 +85,22 @@ margin: 20px;
   border-radius: 5px;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
-.content form .user-details{
+.content form .user-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
-form .user-details .input-box{
+form .user-details .input-box {
   margin-bottom: 15px;
   width: calc(100% / 2 - 20px);
 }
-form .input-box span.details{
+form .input-box span.details {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
 }
-.user-details .input-box input{
+.user-details .input-box input {
   height: 45px;
   width: 100%;
   outline: none;
@@ -112,26 +112,50 @@ form .input-box span.details{
   transition: all 0.3s ease;
 }
 
- form .button{
-   height: 45px;
-   margin: 35px 0
- }
- form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
- }
- form .button input:hover{
+form .button {
+  height: 45px;
+  margin: 35px 0;
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+form .button input:hover {
   /* transform: scale(0.99); */
   background: linear-gradient(-135deg, #71b7e6, #9b59b6);
-  }
+}
 
+.Grade  {
+  border: 5px solid whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0 ;
+}
 
+.Section{
+  border: 5px solid whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0 ;
+}
+
+.strand{
+  border: 5px solid whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0 ;
+}
+
+h4{
+  text-align: center;
+  text-decoration: none;
+}

@@ -47,69 +47,88 @@ if (isset($_SESSION['admin_username'])) {
                         <div class="user-details">
                             <div class="input-box">
                                 <span class="details">Full Name</span>
-                                <input type="text" placeholder="Enter your name" required>
+                                <input type="text" placeholder="Enter your name" required name="FULLNAME">
                             </div>
                             <div class="input-box">
                                 <span class="details">Gmail</span>
-                                <input type="text" placeholder="Enter your username" required>
+                                <input type="text" placeholder="Enter your Gmail" required name="GMAIL">
                             </div>
                             <div class="input-box">
                                 <span class="details">Phone Number</span>
-                                <input type="text" placeholder="Enter your email" required>
+                                <input type="text" placeholder="Enter your Phone Number" required name="CP_NUMBER">
                             </div>
                             <div class="input-box">
                                 <span class="details">Hometown</span>
-                                <input type="text" placeholder="Enter your number" required>
+                                <input type="text" placeholder="Enter your number" required name="HOMETOWN">
                             </div>
                         </div>
-                        <!-- <div class="gender-details">
-                            <input type="radio" name="gender" id="dot-1">
-                            <input type="radio" name="gender" id="dot-2">
-                            <span class="gender-title">Gender</span>
-                            <div class="category">
-                                <label for="dot-1">
-                                    <span class="dot one"></span>
-                                    <span class="gender">Male</span>
-                                </label>
-                                <label for="dot-2">
-                                    <span class="dot two"></span>
-                                    <span class="gender">Female</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="gender-details">
-                            <input type="radio" name="gender" id="dot-1">
-                            <input type="radio" name="gender" id="dot-2">
-                            <input type="radio" name="gender" id="dot-3">
-                            <span class="gender-title">Gender</span>
-                            <div class="category">
-                                <label for="dot-1">
-                                    <span class="dot one"></span>
-                                    <span class="gender">Male</span>
-                                </label>
-                                <label for="dot-2">
-                                    <span class="dot two"></span>
-                                    <span class="gender">Female</span>
-                                </label>
-                                <label for="dot-3">
-                                    <span class="dot three"></span>
-                                    <span class="gender">Prefer not to say</span>
-                                </label>
-                            </div>
-                        </div> -->
+                        <h4>Grade Level</h4>
                         <div class="Grade">
-                            <h3>Grade Level</h3>
-                            <input type="radio" id="11" name="grade_level" value="11">
-                            <label for="11">11</label>
-                            <input type="radio" id="12" name="grade_level" value="12">
-                            <label for="12">12</label>
+                            <div class="item"><input type="radio" name="grade_level" value="11">
+                                <label for="11">11</label>
+                            </div>
+                            <div class="item"><input type="radio" name="grade_level" value="12">
+                                <label for="12">12</label>
+                            </div>
+
                         </div>
+                        <h4>Section</h4>
                         <div class="Section">
-                            <h3>Section</h3>
-                            <input type="radio" id="11" name="grade_level" value="11">
-                            <label for="11">A</label>
-                            <input type="radio" id="12" name="grade_level" value="12">
-                            <label for="12">B</label>
+                            <div class="item">
+                                <input type="radio" name="grade_section" value="A">
+                                <label for="11">A</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_section" value="B">
+                                <label for="12">B</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_section" value="C">
+                                <label for="12">C</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_section" value="D">
+                                <label for="12">D</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_section" value="E">
+                                <label for="12">E</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_section" value="F">
+                                <label for="12">F</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_section" value="G">
+                                <label for="12">G</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_section" value="H">
+                                <label for="12">H</label>
+                            </div>
+                        </div>
+                        <h4>Srand</h4>
+                        <div class="strand">
+                            <div class="item">
+                                <input type="radio" name="grade_strand" value="TVL">
+                                <label for="12">TVL</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_strand" value="STEM">
+                                <label for="12">STEM</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_strand" value="GAS">
+                                <label for="12">GAS</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_section" value="ABM">
+                                <label for="12">ABM</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="grade_section" value="HUMMS">
+                                <label for="12">HUMMS</label>
+                            </div>
                         </div>
                         <div class="button">
                             <input type="submit" value="Register">
