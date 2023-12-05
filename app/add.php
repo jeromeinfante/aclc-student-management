@@ -34,7 +34,7 @@ if (isset($_SESSION['admin_username'])) {
             <div class="container">
                 <div class="title">Add Student</div>
                 <div class="content">
-                    <form action="./functions/add_student.php">
+                    <form action="./functions/add_student.php" method="post">
                         <?php if (isset($_GET['error'])) { ?>
                             <p class="error"><?php echo $_GET['error'] ?></p>
 
@@ -131,7 +131,7 @@ if (isset($_SESSION['admin_username'])) {
                             </div>
                         </div>
                         <div class="button">
-                            <button name="ADD_BTN">Register</button>
+                            <button name="ADD_BTN" type="submit">Register</button>
                         </div>
                     </form>
                 </div>
