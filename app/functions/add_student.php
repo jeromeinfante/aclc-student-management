@@ -14,11 +14,10 @@ $strand = $_POST["grade_strand"];
 $add = "INSERT INTO student_info (stud_name, stud_gmail, stud_cp_num, stud_homwtown, stud_grade, stud_section, stud_strand) VALUES ('$fullname', '$gmail', '$cp_number', '$hometown', '$grade', '$section', '$strand')";
 
 if (isset($_POST["ADD_BTN"])) {
-    mysqli_query($conn, $add);
-    header("location: ../add.php");
-}else{
-    echo "error";
+    if(empty($fullname)){
+        header("location: ../add.php?error=Name is Required");
+    }else if(empty($gmail)){
+        header("location: ../add.php?error=Gmail is Required");
+    }
 }
-
-echo"error";
 ?>
