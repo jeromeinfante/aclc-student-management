@@ -30,6 +30,9 @@ if (isset($_POST["ADD_BTN"])) {
         header("location: ../add.php?error=Strand is Required");
     }else if(!filter_var($gmail, FILTER_VALIDATE_EMAIL)){
         header("location: ../add.php?error=Gmail is Invalid");
+    }else{
+        mysqli_query($conn, "INSERT INTO `student_info` (stud_name, stud_gmail, stud_cp_num, stud_hometown, stud_grade, stud_section, stud_strand) VALUES ('$fullname', '$gmail', '$cp_number', '$hometown', '$grade', '$section', '$strand')");
+        header("location: ../add.php");
     }
 }
 ?>
