@@ -10,9 +10,7 @@ CREATE TABLE student_info(
     stud_hometown INT (255) NOT NULL,
     stud_grade INT(2) NOT NULL,
     stud_section VARCHAR(1) NOT NULL,
-    stud_strand VARCHAR(255) NOT NULL,
- 
-    
+    stud_strand VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE admin_acc(
