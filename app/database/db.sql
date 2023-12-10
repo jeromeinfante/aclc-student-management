@@ -6,10 +6,10 @@ CREATE TABLE student_info(
     stud_id INT AUTO_INCREMENT PRIMARY KEY,
     stud_name VARCHAR(255) NOT NULL,
     stud_gmail VARCHAR(255) NOT NULL,
-    stud_cp_num INT(11) NOT NULL,
+    stud_cp_num INT(50) NOT NULL,
     stud_hometown INT (255) NOT NULL,
-    stud_grade INT(2) NOT NULL,
-    stud_section VARCHAR(1) NOT NULL,
+    stud_grade INT(50) NOT NULL,
+    stud_section VARCHAR(50) NOT NULL,
     stud_strand VARCHAR(255) NOT NULL
 );
 
