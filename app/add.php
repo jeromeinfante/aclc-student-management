@@ -132,7 +132,7 @@ if (isset($_SESSION['admin_username'])) {
                         </div>
                         <div class="button">
                             <!-- <button name="ADD_BTN" type="submit">Add Student</button> -->
-                            <input type="submit" value="add" name="add">
+                            <input type="submit" value="add" name="add" class="btn">
                         </div>
                     </form>
                 </div>
