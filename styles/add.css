@@ -130,7 +130,7 @@ form .input-box span.details {
   transition: all 0.3s ease;
 }
 
-.button {
+.button input{
   height: 45px;
   margin: 35px 0;
 }

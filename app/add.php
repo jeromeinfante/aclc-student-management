@@ -34,7 +34,7 @@ if (isset($_SESSION['admin_username'])) {
             <div class="container">
                 <div class="title">Add Student</div>
                 <div class="content">
-                    <form action="add_student.php" method="post">
+                    <form action="./functions/add_student.php" method="POST">
                         <?php if (isset($_GET['error'])) { ?>
                             <p class="error"><?php echo $_GET['error'] ?></p>
 
@@ -55,7 +55,7 @@ if (isset($_SESSION['admin_username'])) {
                             </div>
                             <div class="input-box">
                                 <span class="details">Phone Number</span>
-                                <input type="number" placeholder="Enter your Phone Number" name="CP_NUMBER">
+                                <input type="number" placeholder="Enter your Phone Number" name="NUMBER">
                             </div>
                             <div class="input-box">
                                 <span class="details">Hometown</span>
@@ -64,10 +64,12 @@ if (isset($_SESSION['admin_username'])) {
                         </div>
                         <h4>Grade Level</h4>
                         <div class="Grade">
-                            <div class="item"><input type="radio" name="grade_level" value="11" id="11">
+                            <div class="item">
+                                <input type="radio" name="GRADE" value="11" id="11">
                                 <label for="11">11</label>
                             </div>
-                            <div class="item"><input type="radio" name="grade_level" value="12" id="12">
+                            <div class="item">
+                                <input type="radio" name="GRADE" value="12" id="12">
                                 <label for="12">12</label>
                             </div>
 
@@ -75,63 +77,62 @@ if (isset($_SESSION['admin_username'])) {
                         <h4>Section</h4>
                         <div class="Section">
                             <div class="item">
-                                <input type="radio" name="grade_section" value="A" id="A">
+                                <input type="radio" name="SECTION" value="A" id="A">
                                 <label for="A">A</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_section" value="B" id="B">
+                                <input type="radio" name="SECTION" value="B" id="B">
                                 <label for="B">B</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_section" value="C" id="C">
+                                <input type="radio" name="SECTION" value="C" id="C">
                                 <label for="C">C</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_section" value="D" id="D">
+                                <input type="radio" name="SECTION" value="D" id="D">
                                 <label for="D">D</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_section" value="E" id="E">
+                                <input type="radio" name="SECTION" value="E" id="E">
                                 <label for="E">E</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_section" value="F" id="F">
+                                <input type="radio" name="SECTION" value="F" id="F">
                                 <label for="F">F</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_section" value="G" id="G">
+                                <input type="radio" name="SECTION" value="G" id="G">
                                 <label for="G">G</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_section" value="H" id="H">
+                                <input type="radio" name="SECTION" value="H" id="H">
                                 <label for="H">H</label>
                             </div>
                         </div>
                         <h4>Strand</h4>
                         <div class="strand">
                             <div class="item">
-                                <input type="radio" name="grade_strand" value="TVL" id="TVL">
+                                <input type="radio" name="STRAND" value="TVL" id="TVL">
                                 <label for="TVL">TVL</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_strand" value="STEM" id="STEM">
+                                <input type="radio" name="STRAND" value="STEM" id="STEM">
                                 <label for="STEM">STEM</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_strand" value="GAS" id="GAS">
+                                <input type="radio" name="STRAND" value="GAS" id="GAS">
                                 <label for="GAS">GAS</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_strand" value="ABM" id="ABM">
+                                <input type="radio" name="STRAND" value="ABM" id="ABM">
                                 <label for="ABM">ABM</label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="grade_strand" value="HUMMS" id="HUMMS">
+                                <input type="radio" name="STRAND" value="HUMMS" id="HUMMS">
                                 <label for="HUMMS">HUMMS</label>
                             </div>
                         </div>
                         <div class="button">
-                            <!-- <button name="ADD_BTN" type="submit">Add Student</button> -->
                             <input type="submit" value="add" name="add" class="btn">
                         </div>
                     </form>
@@ -145,7 +146,7 @@ if (isset($_SESSION['admin_username'])) {
 
 <?php
 } else {
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 ?>
