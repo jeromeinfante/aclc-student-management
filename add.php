@@ -16,7 +16,7 @@ if (isset($_SESSION['admin_username'])) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>User Registration</title>
-        <link rel="stylesheet" href="../styles/add.css?v=<?php echo time(); ?>">
+        <link rel="stylesheet" href="add.css?v=<?php echo time(); ?>">
     </head>
 
     <body>
@@ -34,7 +34,7 @@ if (isset($_SESSION['admin_username'])) {
             <div class="container">
                 <div class="title">Add Student</div>
                 <div class="content">
-                    <form action="add_student.php" method="post">
+                    <form action="addstudent.php" method="post">
                         <?php if (isset($_GET['error'])) { ?>
                             <p class="error"><?php echo $_GET['error'] ?></p>
 
@@ -131,7 +131,6 @@ if (isset($_SESSION['admin_username'])) {
                             </div>
                         </div>
                         <div class="button">
-                            <!-- <button name="ADD_BTN" type="submit">Add Student</button> -->
                             <input type="submit" value="add" name="add">
                         </div>
                     </form>
