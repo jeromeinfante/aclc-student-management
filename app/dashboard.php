@@ -4,7 +4,7 @@ include_once("../app/database/dbconn.php");
 $result = mysqli_query($conn, "SELECT * FROM `student`");
 if (isset($_SESSION['admin_username'])) {
 
-   
+
 
 ?>
     <!DOCTYPE html>
@@ -43,23 +43,31 @@ if (isset($_SESSION['admin_username'])) {
             </thead>
             <tbody>
 
-                <?php $i = 1; while ($row = mysqli_fetch_array($result)) : ?>
-                <tr>
+                <?php $i = 1;
+                while ($row = mysqli_fetch_assoc($result)) : ?>
+                    <tr>
 
-                    <td><?php echo $row['fullname'] ?></td>
-                    <td><?php echo $row['gmail'] ?></td>
-                    <td><?php echo $row['phoneNumber'] ?></td>
-                    <td><?php echo $row['hometown'] ?></td>
-                    <td><?php echo $row['grade'] ?></td>
-                    <td><?php echo $row['section'] ?></td>
-                    <td><?php echo $row['strand'] ?></td>
-                    <td>
-                        <a href="./functions/delete.php?id=$row['id']" class="button" id="delete">Delete</a> 
-                        <a href="./functions/update.php?id=$row['id']" class="button" id="update">Update</a>
-                    </td>
+                        <td><?php echo $row['fullname'] ?></td>
+                        <td><?php echo $row['gmail'] ?></td>
+                        <td><?php echo $row['phoneNumber'] ?></td>
+                        <td><?php echo $row['hometown'] ?></td>
+                        <td><?php echo $row['grade'] ?></td>
+                        <td><?php echo $row['section'] ?></td>
+                        <td><?php echo $row['strand'] ?></td>
+                        <td>
+                            <form action="./functions/delete.php" method="post">
+                                <input type="hidden" value="<?php echo $row['id']?>" name="id">
+                                <input type="submit" name="delete" value="Delete" class="button" id="delete">
+                            </form>
+                            <form action="./functions/update.php" method="post">
+                                <input type="hidden" value="<?php echo $row['id']?>" name="id">
+                                <input type="submit" name="update" value="Update" class="button" id="update">
+                            </form>
+                        </td>
 
-                </tr >
-                <?php $i++; endwhile;?>
+                    </tr>
+                <?php $i++;
+                endwhile; ?>
             </tbody>
         </table>
     </body>

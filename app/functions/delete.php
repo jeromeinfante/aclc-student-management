@@ -1,10 +1,12 @@
-<?php 
+<?php
 
 require_once("../database/dbconn.php");
 
-$id = $_GET['id'];
+if (isset($_POST["delete"])) {
 
-mysqli_query($conn, "DELETE FROM student WHERE id=$id");
-header("location: ../dashboard.php");
+    $id = $_POST['id'];
 
-?>
+
+    mysqli_query($conn, "DELETE FROM student WHERE id=$id");
+    header("location: ../dashboard.php");
+}
