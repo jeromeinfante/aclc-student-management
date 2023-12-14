@@ -146,7 +146,7 @@ if (isset($_SESSION['admin_username'])) {
 
 <?php
 } else {
-    header("Location: index.php");
+    header("Location: login.php");
     exit();
 }
 ?>
