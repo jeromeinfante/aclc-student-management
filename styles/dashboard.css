@@ -77,14 +77,15 @@ th {
     padding: 10px;
     border: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.delete {
+#delete {
     background-color: #ff3333;
     color: #fff;
 }
 
-.update {
+#update {
     background-color: #4CAF50;
     color: #fff;
 }

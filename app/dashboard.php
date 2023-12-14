@@ -54,8 +54,8 @@ if (isset($_SESSION['admin_username'])) {
                     <td><?php echo $row['section'] ?></td>
                     <td><?php echo $row['strand'] ?></td>
                     <td>
-                        <button class="button delete">Delete</button>
-                        <button class="button update">Update</button>
+                        <a href="./functions/delete.php?id=$row['id']" class="button" id="delete">Delete</a> 
+                        <a href="./functions/update.php?id=$row['id']" class="button" id="update">Update</a>
                     </td>
 
                 </tr >
