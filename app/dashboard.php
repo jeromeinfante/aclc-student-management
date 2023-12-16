@@ -59,10 +59,7 @@ if (isset($_SESSION['admin_username'])) {
                                 <input type="hidden" value="<?php echo $row['id']?>" name="id">
                                 <input type="submit" name="delete" value="Delete" class="button" id="delete">
                             </form>
-                            <form action="./functions/update.php" method="post">
-                                <input type="hidden" value="<?php echo $row['id']?>" name="id">
-                                <input type="submit" name="update" value="Update" class="button" id="update">
-                            </form>
+                           <a href="./functions/update.php?id=<?php echo $row['id']; ?>" class="button" id="update">Update</a>
                         </td>
 
                     </tr>
