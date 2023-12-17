@@ -55,11 +55,8 @@ if (isset($_SESSION['admin_username'])) {
                         <td><?php echo $row['section'] ?></td>
                         <td><?php echo $row['strand'] ?></td>
                         <td>
-                            <form action="./functions/delete.php" method="post">
-                                <input type="hidden" value="<?php echo $row['id']?>" name="id">
-                                <input type="submit" name="delete" value="Delete" class="button" id="delete">
-                            </form>
-                           <a href="./functions/update.php?id=<?php echo $row['id']; ?>" class="button" id="update">Update</a>
+                            <a href="./functions/delete.php?id=<?php echo $row['id']; ?>" class="button" id="delete">Delete</a>
+                            <a href="update.php?id=<?php echo $row['id']; ?>" class="button" id="update">Update</a>
                         </td>
 
                     </tr>
