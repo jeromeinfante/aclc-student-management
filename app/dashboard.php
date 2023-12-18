@@ -56,7 +56,7 @@ if (isset($_SESSION['admin_username'])) {
                         <td><?php echo $row['strand'] ?></td>
                         <td>
                             <a href="./functions/delete.php?id=<?php echo $row['id']; ?>" class="button" id="delete">Delete</a>
-                            <a href="update.php?id=<?php echo $row['id']; ?>" class="button" id="update">Update</a>
+                            <a href="update.php?updateid=<?php echo $row['id']; ?>" class="button" id="update">Update</a>
                         </td>
 
                     </tr>
