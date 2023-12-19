@@ -1,39 +1,41 @@
 <?php
 
 session_start();
-include_once("../app/database/dbconn.php");
+require_once("../app/database/dbconn.php");
+
 if (isset($_SESSION['admin_username'])) {
-    $updateid = $_GET['id']; 
-    echo $updateid;
-     if(isset($_POST['update'])) {
-       
-        
-        $name = $_POST['FULLNAME'];
-        $gmail = $_POST['GMAIL'];
-        $number = $_POST['NUMBER'];
-        $hometown = $_POST['HOMETOWN'];
-        $name = $_POST['FULLNAME'];
-        $grade = $_POST['GRADE'];
-        $section = $_POST['SECTION'];
-        $strand = $_POST['STRAND'];
 
-
-        $update = "UPDATE `student` SET  `fullname` = '$name', `gmail` = '$gmail', `phoneNumber` = '$number', `hometown` = '$hometown', `grade` = $grade, `section` = '$section', `strand` = '$strand' WHERE id=$updateid ";
-        $sql = mysqli_query($conn, $update);
-
-        if ($sql){
-            echo "success";
-        }else{
-            echo "error";  
-        }
+    $id = $_GET['id'];
+    $result = mysqli_query($conn, "SELECT * FROM `student` WHERE id='$id'");
+    while ($row = mysqli_fetch_assoc($result)) {
+        $name = $row["fullname"];
+        $gmail = $row["gmail"];
+        $number = $row["phoneNumber"];
+        $home = $row["hometown"];
+        $grade = $row["grade"];
     }
 
+    // if (isset($_POST['edit'])) {
+
+    //     $name = $_POST['FULLNAME'];
+    //     $gmail = $_POST['GMAIL'];
+    //     $number = $_POST['NUMBER'];
+    //     $hometown = $_POST['HOMETOWN'];
+    //     $grade = $_POST['GRADE'];
+    //     $section = $_POST['SECTION'];
+    //     $strand = $_POST['STRAND'];
+
+    //     $update = "UPDATE `student` SET  `fullname` = '$name', `gmail` = '$gmail', `phoneNumber` = '$number', `hometown` = '$hometown', `grade` = $grade, `section` = '$section', `strand` = '$strand' WHERE id= $id";
+    //     $sql = mysqli_query($conn, $update);
 
 
-
-
-
-
+    //     if ($sql) {
+    //         echo "success";
+    //         header("location: update.php?success=Done");
+    //     } else {
+    //         echo "error";
+    //     }
+    // }
 
 ?>
 
@@ -53,8 +55,8 @@ if (isset($_SESSION['admin_username'])) {
             <div class="container">
                 <div class="title">Update Student</div>
                 <div class="content">
-                    <form action="update.php" method="POST">
-                        
+                    <form action="./functions/update_func.php" method="POST">
+
                         <?php if (isset($_GET['error'])) { ?>
                             <p class="error"><?php echo $_GET['error'] ?></p>
 
@@ -68,19 +70,19 @@ if (isset($_SESSION['admin_username'])) {
                         <div class="user-details">
                             <div class="input-box">
                                 <span class="details">Full Name</span>
-                                <input type="text" placeholder="" name="FULLNAME">
+                                <input type="text" value="<?php echo $name; ?>" name="FULLNAME">
                             </div>
                             <div class="input-box">
                                 <span class="details">Gmail</span>
-                                <input type="text" placeholder="" name="GMAIL">
+                                <input type="text" value="<?php echo $gmail; ?>" name="GMAIL">
                             </div>
                             <div class="input-box">
                                 <span class="details">Phone Number</span>
-                                <input type="number" placeholder="" name="NUMBER">
+                                <input type="number" value="<?php echo $number; ?>" name="NUMBER">
                             </div>
                             <div class="input-box">
                                 <span class="details">Hometown</span>
-                                <input type="text" placeholder="" name="HOMETOWN">
+                                <input type="text" value="<?php echo $home; ?>" name="HOMETOWN">
                             </div>
                         </div>
                         <h4>Grade Level</h4>
@@ -154,8 +156,9 @@ if (isset($_SESSION['admin_username'])) {
                             </div>
                         </div>
                         <div class="button">
-                            <input type="submit" value="Update" name="update" class="btn">
+                            <input type="submit" value="Update" name="edit" class="btn">
                         </div>
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
                     </form>
                     <div class="dashboard">
                         <a href="dashboard.php">Dashboard</a>
