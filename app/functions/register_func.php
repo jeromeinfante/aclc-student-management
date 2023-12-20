@@ -19,7 +19,7 @@ $password_len = $_POST["PASSWORD"];
 $password = md5($password_hash);
 
 
-$select = "SELECT * FROM `admin_acc` WHERE admin_username ='$username' AND admin_gmail = '$gmail' ";
+$select = "SELECT * FROM `admin` WHERE admin_username ='$username' AND admin_gmail = '$gmail' ";
 
 if (isset($_POST["REGISTER-BTN"])) {
     $result = mysqli_query($conn, $select);
@@ -36,7 +36,7 @@ if (isset($_POST["REGISTER-BTN"])) {
     } elseif (!filter_var($gmail, FILTER_VALIDATE_EMAIL)) {
         header("location: ../register.php?error=Gmail is Invalid");
     }else {
-        mysqli_query($conn, "INSERT INTO `admin_acc` (admin_username, admin_gmail, admin_password) VALUES ('$username', '$gmail', '$password')");
+        mysqli_query($conn, "INSERT INTO `admin` (admin_username, admin_gmail, admin_password) VALUES ('$username', '$gmail', '$password')");
         header("location: ../register.php?success=Registration Successfully!");
     }
 }

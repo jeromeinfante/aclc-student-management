@@ -18,7 +18,7 @@ if (isset($_POST["USERNAME"]) && isset($_POST["PASSWORD"])) {
 
 
 
-    $select = "SELECT * FROM `admin_acc` WHERE admin_username ='$username' AND admin_password = '$password' ";
+    $select = "SELECT * FROM `admin` WHERE admin_username ='$username' AND admin_password = '$password' ";
     $result = $conn->query($select);
 
   if (mysqli_num_rows($result) == 1) {

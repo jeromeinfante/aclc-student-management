@@ -15,28 +15,6 @@ if (isset($_SESSION['admin_username'])) {
         $grade = $row["grade"];
     }
 
-    // if (isset($_POST['edit'])) {
-
-    //     $name = $_POST['FULLNAME'];
-    //     $gmail = $_POST['GMAIL'];
-    //     $number = $_POST['NUMBER'];
-    //     $hometown = $_POST['HOMETOWN'];
-    //     $grade = $_POST['GRADE'];
-    //     $section = $_POST['SECTION'];
-    //     $strand = $_POST['STRAND'];
-
-    //     $update = "UPDATE `student` SET  `fullname` = '$name', `gmail` = '$gmail', `phoneNumber` = '$number', `hometown` = '$hometown', `grade` = $grade, `section` = '$section', `strand` = '$strand' WHERE id= $id";
-    //     $sql = mysqli_query($conn, $update);
-
-
-    //     if ($sql) {
-    //         echo "success";
-    //         header("location: update.php?success=Done");
-    //     } else {
-    //         echo "error";
-    //     }
-    // }
-
 ?>
 
     <!DOCTYPE html>

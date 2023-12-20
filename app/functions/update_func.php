@@ -20,8 +20,27 @@ $strand = val($_POST['STRAND']);
 $id = val($_POST['id']);
 
 $sql = "UPDATE `student` SET  `fullname` = '$name', `gmail` = '$gmail', `phoneNumber` = '$number', `hometown` = '$hometown', `grade` = $grade, `section` = '$section', `strand` = '$strand' WHERE id= $id";
-$update = mysqli_query($conn, $sql);
 
-if ($update) {
-    header("location: ../update.php?success=Update Success");
+if (empty($name)) {
+    header("location:../update.php?error=Name is Required");
+} else if (empty($gmail)) {
+    header("location: ../update.php?error=Gmail is Required");
+} else if (empty($number)) {
+    header("location: ../update.php?error=Cellphone is Required");
+} else if (empty($hometown)) {
+    header("location: ../update.php?error=Hometown is Required");
+} else if (empty($grade)) {
+    header("location: ../update.php?error=Grade is Required");
+} else if (empty($section)) {
+    header("location: ../update.php?error=Section is Required");
+} else if (empty($strand)) {
+    header("location: ../update.php?error=Strand is Required");
+} else if (!filter_var($gmail, FILTER_VALIDATE_EMAIL)) {
+    header("location: ../update.php?error=Gmail is Invalid");
+} else {
+    mysqli_query($conn, $sql);
+    header("location: ../update.php?success=Update Successfully!");
 }
+
+
+?>
