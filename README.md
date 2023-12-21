@@ -29,7 +29,7 @@ sudo /opt/lampp/lampp start
 
 # copy the database file into phpMySQL
 
-localhost/JEROME-INFANTE-PROG-12-C/app/login.php
+localhost/aclc-student-management/app/login.php
 ```
 
 
