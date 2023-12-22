@@ -19,6 +19,8 @@ seamlessly.
 
 
 ``` sh
+cd /opt/lampp/htdocs
+
 git clone https://github.com/sphyxi4/aclc-student-management.git
 
 # Make sure to have a XAMPP
