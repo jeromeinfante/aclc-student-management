@@ -16,9 +16,7 @@ CREATE TABLE student(
 CREATE TABLE admin(
     admin_id INT AUTO_INCREMENT PRIMARY KEY,
     admin_username VARCHAR(255) NOT NULL,
+    admin_gmail VARCHAR(255) NOT NULL,
     admin_password VARCHAR(255) NOT NULL
 );
-
-INSERT INTO `admin` (`admin_username`, `admin_password`) VALUES ("Boboy_Infante", "2220001293")
-
 

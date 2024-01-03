@@ -22,14 +22,14 @@ if (isset($_POST["USERNAME"]) && isset($_POST["PASSWORD"])) {
         $row = mysqli_fetch_assoc($result);
         if ($row["admin_username"] === $username && $row["admin_password"] === $password) {
             $_SESSION['admin_username'] = $row['admin_username'];
-            header('location: ../home.php');
+            header('location: ./public/home.php');
             exit();
         } else {
-            header('location: ../login.php?error=Incorrect Password or Username');
+            header('location: ./public/index.php?error=Incorrect Password or Username');
             exit();
         }
     } else {
-        header('location: ../login.php?error=Incorrect Password or Username');
+        header('location: ./public/index.php?error=Incorrect Password or Username');
         exit();
     }
 }
