@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="../index.php">helo</a>
+    <h1>hello world</h1>
 </body>
 </html>

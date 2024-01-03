@@ -23,13 +23,13 @@
             </form>
             <div class="signup">
                 <span class="signup">Don't have an account?
-                    <label for="check">Signup</label>
+                    <label for="check">Register</label>
                 </span>
             </div>
         </div>
         <div class="registration form">
-            <header>Signup</header>
-            <form action="./server/models/signup.php" method="post">
+            <header>Register</header>
+            <form action="./server/models/register.php" method="post">
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="error"> <?php echo $_GET['error'] ?> </p>
                 <?php } ?>

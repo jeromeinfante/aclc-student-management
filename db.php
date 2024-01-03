@@ -1,12 +1,9 @@
-<?php
+<?php 
 
+$conn = mysqli_connect("localhost","root","","ACLC");
 
-$conn = mysqli_connect("localhost", "root", "", "STUDENT_MANAGEMENT");
-
-if (mysqli_connect_errno()) {
-    die("" . mysqli_connect_error());
-}else{
-    echo"connected";
+if(!$conn){
+    die("". mysqli_connect_error());
 }
-?>
 
+?>
