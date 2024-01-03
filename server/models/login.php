@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("./db.php");
+include_once("/opt/lampp/htdocs/student/db.php");
 
 if (isset($_POST["USERNAME"]) && isset($_POST["PASSWORD"])) {
 
@@ -25,11 +25,11 @@ if (isset($_POST["USERNAME"]) && isset($_POST["PASSWORD"])) {
             header('location: ./public/home.php');
             exit();
         } else {
-            header('location: ./public/index.php?error=Incorrect Password or Username');
+            header('location: ../index.php?error=Incorrect Password or Username');
             exit();
         }
     } else {
-        header('location: ./public/index.php?error=Incorrect Password or Username');
+        header('location: ../index.php?error=Incorrect Password or Username');
         exit();
     }
 }

@@ -15,12 +15,10 @@
         <input type="checkbox" id="check">
         <div class="login form">
             <header>Login</header>
-            <form action="./server/models/login.php">
-                <?php if (isset($_GET['error'])) { ?>
-                    <p class="error"> <?php echo $_GET['error'] ?> </p>
-                <?php } ?>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
+            <form action="./server/models/login.php" method="post">
+ 
+                <input type="text" placeholder="Username" name="USERNAME">
+                <input type="password" placeholder="Password" name="PASSWORD">
                 <input type="submit" class="button" value="Login">
             </form>
             <div class="signup">
@@ -31,17 +29,17 @@
         </div>
         <div class="registration form">
             <header>Signup</header>
-            <form action="./server/models/signup.php">
+            <form action="./server/models/signup.php" method="post">
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="error"> <?php echo $_GET['error'] ?> </p>
                 <?php } ?>
                 <?php if (isset($_GET['success'])) { ?>
                     <p class="success"><?php echo $_GET['success'] ?></p>
                 <?php } ?>
-                <input type="text" placeholder="Username">
-                <input type="text" placeholder="Gmail">
-                <input type="password" placeholder="Password">
-                <input type="submit" class="button" value="Signup">
+                <input type="text" placeholder="Username" name="USERNAME">
+                <input type="text" placeholder="Gmail" name="GMAIL">
+                <input type="password" placeholder="Password" name="PASSWORD">
+                <input type="submit" class="button" value="Signup" name="REGISTER-BTN">
             </form>
             <div class="signup">
                 <span class="signup">Already have an account?
