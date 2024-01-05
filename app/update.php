@@ -24,7 +24,7 @@ if (isset($_SESSION['admin_username'])) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>User Registration</title>
-        <link rel="stylesheet" href="../styles/update.css?v=<?php echo time(); ?>">
+        <link rel="stylesheet" href="../assets/styles/update.css?v=<?php echo time(); ?>">
     </head>
 
     <body>
@@ -33,7 +33,7 @@ if (isset($_SESSION['admin_username'])) {
             <div class="container">
                 <div class="title">Update Student</div>
                 <div class="content">
-                    <form action="./functions/update_func.php" method="POST">
+                    <form action="./models/update_func.php" method="POST">
 
                         <?php if (isset($_GET['error'])) { ?>
                             <p class="error"><?php echo $_GET['error'] ?></p>

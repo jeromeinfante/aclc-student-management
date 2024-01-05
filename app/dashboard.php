@@ -14,7 +14,7 @@ if (isset($_SESSION['admin_username'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dashboard</title>
-        <link rel="stylesheet" href="../styles/dashboard.css?v=<?php echo time(); ?>" />
+        <link rel="stylesheet" href="../assets/styles/dashboard.css?v=<?php echo time(); ?>" />
     </head>
 
     <body>
@@ -55,7 +55,7 @@ if (isset($_SESSION['admin_username'])) {
                         <td><?php echo $row['section'] ?></td>
                         <td><?php echo $row['strand'] ?></td>
                         <td>
-                            <a href="./functions/delete.php?id=<?php echo $row['id']; ?>" class="button" id="delete">Delete</a>
+                            <a href="./models/delete.php?id=<?php echo $row['id']; ?>" class="button" id="delete">Delete</a>
                             <a href="update.php?id=<?php echo $row['id']; ?>" class="button" id="update">Update</a>
                         </td>
 

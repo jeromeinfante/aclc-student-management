@@ -25,20 +25,18 @@ if (isset($_POST["REGISTER-BTN"])) {
     $result = mysqli_query($conn, $select);
     if (mysqli_num_rows($result) > 0) {
         header("location: ../register.php?error=Account already Registered");
-    }elseif ($password_len < 8) {
-        header("location: ../register.php?error=Password Should be 8 Char");
-    }elseif (empty($password_hash)) {
+    } elseif (empty($password_hash)) {
         header("location: ../register.php?error=Password is Required");
     } elseif (empty($username)) {
         header("location: ../register.php?error=Name is Required");
     } elseif (empty($gmail)) {
         header("location: ../register.php?error=Gmail is Required");
+    } elseif ($password_len < 8) {
+        header("location: ../register.php?error=Password Should be 8 Char");
     } elseif (!filter_var($gmail, FILTER_VALIDATE_EMAIL)) {
         header("location: ../register.php?error=Gmail is Invalid");
-    }else {
+    } else {
         mysqli_query($conn, "INSERT INTO `admin` (admin_username, admin_gmail, admin_password) VALUES ('$username', '$gmail', '$password')");
         header("location: ../register.php?success=Registration Successfully!");
     }
 }
-
-?>  
